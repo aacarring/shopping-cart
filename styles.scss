@@ -10,23 +10,29 @@
     box-sizing: border-box;
 }
 body {
+    background: rgb(236, 205, 205);
     @include flexDisplay();
     height: 100vh;
     width: 100vw;
     overflow: scroll;
     flex-direction: column;
+    //need to make navbar responsive, consider media queries for breakpoints, will need to move content div further down at breakpoint
     nav {
+        overflow: hidden;
         font-family: 'Cutive Mono', monospace;
         display: flex;
         position: absolute;
         top: 0;
         flex-direction: row;
+        flex-wrap: wrap;
         width: 100vw;
-        height: 15vh;
+        min-height: 15vh;
         background: rgb(222, 241, 247);
         header {
+            position: relative;
             @include flexDisplay();
             flex-direction: row;
+            flex-wrap: wrap;
             margin-left: 20px;
             h1 {
                 margin: 20px;
@@ -41,14 +47,15 @@ body {
         .links {
             @include flexDisplay();
             flex-direction: row;
-            position: absolute;
-            right: 20px;
+            position: relative;
             align-self: center;
+            flex: 1;
             ul {
                 @include flexDisplay();
                 flex-direction: row;
+                flex-wrap: wrap;
                 li {
-                    margin: 10px;
+                    margin: 0 2vw;
                     list-style-type: none;
                     a {
                         font-size: 1.25em;
@@ -63,18 +70,60 @@ body {
         }
     }
     .content {
+        @include flexDisplay();
+        flex-direction: column;
         position: absolute;
-        top: 20vh;
+        top: 15vh;
         .drinks {
+            margin-top: 5vh;
             .beverage {
+                @include flexDisplay();
+                justify-content: flex-start;
                 img {
-                    height: 200px;
-                    width: 150px;
+                    margin: 15px;
+                    border-radius: 15px;
+                    height: 300px;
+                    width: 250px;
+                    box-shadow: 1px 1px 15px grey;
+                }
+                .info {
+                    @include flexDisplay();
+                    flex-direction: column;
+                    width: 250px;
+                    height: 300px;
+                    background: snow;
+                    border-radius: 15px;
+                    margin: 10px;
+                    box-shadow: 1px 1px 15px grey;
+                    .drink-name {
+                        text-align: center;
+                        font-size: 1.75em;
+                        font-weight: 600;
+                        margin-bottom: 2vh;
+                        font-family: 'Cutive Mono', monospace;
+                    }
+                    .price {
+                        margin-bottom: 5vh;
+                        font-size: 1.25em;
+                        font-weight: 400;
+                        text-align: center;
+                        font-family: 'Cutive Mono', monospace;
+                    }
+                    button {
+                        justify-self: center;
+                        border-radius: 10px;
+                        border: none;
+                        padding: 15px;
+                        font-weight: 600;
+                        font-size: .9em;
+                        &:hover {
+                            cursor: pointer;
+                            color: rgb(236, 205, 205);
+                            background: black;
+                        }
+                    }
                 }
             }
-        }
-        .shopping-cart {
-            
         }
     }
 }

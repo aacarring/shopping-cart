@@ -5,6 +5,7 @@
 }
 
 body {
+  background: #eccdcd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,20 +15,24 @@ body {
   flex-direction: column;
 }
 body nav {
+  overflow: hidden;
   font-family: "Cutive Mono", monospace;
   display: flex;
   position: absolute;
   top: 0;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100vw;
-  height: 15vh;
+  min-height: 15vh;
   background: #def1f7;
 }
 body nav header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-left: 20px;
 }
 body nav header h1 {
@@ -44,18 +49,19 @@ body nav .links {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  position: absolute;
-  right: 20px;
+  position: relative;
   align-self: center;
+  flex: 1;
 }
 body nav .links ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 body nav .links ul li {
-  margin: 10px;
+  margin: 0 2vw;
   list-style-type: none;
 }
 body nav .links ul li a {
@@ -67,12 +73,67 @@ body nav .links ul li a:hover {
   font-weight: 900;
 }
 body .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
-  top: 20vh;
+  top: 15vh;
+}
+body .content .drinks {
+  margin-top: 5vh;
+}
+body .content .drinks .beverage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
 }
 body .content .drinks .beverage img {
-  height: 200px;
-  width: 150px;
+  margin: 15px;
+  border-radius: 15px;
+  height: 300px;
+  width: 250px;
+  box-shadow: 1px 1px 15px grey;
+}
+body .content .drinks .beverage .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 300px;
+  background: snow;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 1px 1px 15px grey;
+}
+body .content .drinks .beverage .info .drink-name {
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: 600;
+  margin-bottom: 2vh;
+  font-family: "Cutive Mono", monospace;
+}
+body .content .drinks .beverage .info .price {
+  margin-bottom: 5vh;
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+}
+body .content .drinks .beverage .info button {
+  justify-self: center;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+body .content .drinks .beverage .info button:hover {
+  cursor: pointer;
+  color: #eccdcd;
+  background: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
