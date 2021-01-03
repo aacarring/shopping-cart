@@ -1,0 +1,80 @@
+@mixin flexDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    @include flexDisplay();
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    flex-direction: column;
+    nav {
+        font-family: 'Cutive Mono', monospace;
+        display: flex;
+        position: absolute;
+        top: 0;
+        flex-direction: row;
+        width: 100vw;
+        height: 15vh;
+        background: rgb(222, 241, 247);
+        header {
+            @include flexDisplay();
+            flex-direction: row;
+            margin-left: 20px;
+            h1 {
+                margin: 20px;
+                font-size: 2em;
+            }
+            img {
+                margin-left: 10px;
+                height: 65px;
+                width: 65px;
+           }
+        }
+        .links {
+            @include flexDisplay();
+            flex-direction: row;
+            position: absolute;
+            right: 20px;
+            align-self: center;
+            ul {
+                @include flexDisplay();
+                flex-direction: row;
+                li {
+                    margin: 10px;
+                    list-style-type: none;
+                    a {
+                        font-size: 1.25em;
+                        color: black;
+                        text-decoration: none;
+                        &:hover {
+                            font-weight: 900;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        position: absolute;
+        top: 20vh;
+        .drinks {
+            .beverage {
+                img {
+                    height: 200px;
+                    width: 150px;
+                }
+            }
+        }
+        .shopping-cart {
+            
+        }
+    }
+}
