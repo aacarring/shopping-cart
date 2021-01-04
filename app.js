@@ -1,5 +1,5 @@
 const addItemBtn = document.querySelectorAll('.content .drinks .beverage button');
-const cart = document.querySelector('.content .shopping-cart .cart-items');
+const cart= document.querySelector('.content .shopping-cart .cart-items');
 const total = document.querySelector('.content .shopping-cart .total p');
 const checkoutBtn = document.querySelector('.content .shopping-cart .checkout');
 let totalCount = 0;
@@ -12,30 +12,37 @@ function addItem() {
     let priceSpan = item.getElementsByClassName('price');
     let itemName = nameSpan[0].textContent;
     let itemPrice = parseFloat(priceSpan[0].textContent.replace('$', ''));
-    totalCount += itemPrice;
+    
 
-    let orderHTML = `
-    <div class="order">
+    let order = document.createElement('div');
+    order.classList.add('order');
+    order.innerHTML = `
     <span class="order-item">${itemName}</span>
     <span class="order-price">$${itemPrice}</span>
     <button class="delete">Delete</button>
-    </div>
     `
-    cart.innerHTML += orderHTML;
-
+    cart.appendChild(order);
+    totalCount += itemPrice;
     total.textContent = `Total: $${totalCount.toFixed(2)}`;
 
-    function deleteItem() {
-        ////////////////
+    function deleteItem(event) {
+        event.preventDefault();
+        let deleteClicked = event.target;
+        let deletePrice = deleteClicked.parentElement.getElementsByClassName('order-price');
+        let priceToSubtract = parseFloat(deletePrice[0].textContent.replace('$', ''));
+        
+        deleteClicked.parentElement.remove();
+       // totalCount -= priceToSubtract;
+        //total.textContent = `Total: $${totalCount.toFixed(2)}`; 
     }
 
-    let deleteBtn = document.querySelector('.content .shopping-cart .order .delete');
-    deleteBtn.addEventListener('click', deleteItem);
+    let deleteBtn = document.querySelectorAll('.content .shopping-cart .order .delete');
+    deleteBtn.forEach(btn => btn.addEventListener('click', deleteItem));
 }
 
 function clearCart() {
     totalCount = 0;
-    total.textContent = "Total:";
+    total.textContent = "Total: $0.00";
     cart.innerHTML = "";
 }
 
