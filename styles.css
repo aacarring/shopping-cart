@@ -76,9 +76,47 @@ body .content {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vh;
   flex-direction: column;
   position: absolute;
   top: 15vh;
+  margin-bottom: 5vh;
+}
+body .content .shopping-cart {
+  width: 100vw;
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .content .shopping-cart h1 {
+  margin: 50px;
+  font-family: "Cutive Mono", monospace;
+}
+body .content .shopping-cart .total {
+  background: lightgoldenrodyellow;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+body .content .shopping-cart .total p {
+  margin: 20px;
+}
+body .content .shopping-cart button {
+  margin: 50px;
+  padding: 10px;
+  font-size: 0.9em;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+body .content .shopping-cart button:hover {
+  cursor: pointer;
+  color: #eccdcd;
+  background: black;
 }
 body .content .drinks {
   margin-top: 5vh;

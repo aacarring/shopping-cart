@@ -71,9 +71,45 @@ body {
     }
     .content {
         @include flexDisplay();
+        width: 100vh;
         flex-direction: column;
         position: absolute;
         top: 15vh;
+        margin-bottom: 5vh;
+        .shopping-cart {
+            width: 100vw;
+            background: lightblue;
+            @include flexDisplay();
+            flex-direction: column;
+            h1 {
+                margin: 50px;
+                font-family: 'Cutive Mono', monospace;
+            }
+            .total {
+                background: lightgoldenrodyellow;
+                width: 100vw;
+                height: 10vh;
+                text-align: center;
+                font-family: 'Cutive Mono', monospace;
+                font-size: 1.25em;
+                font-weight: 600;
+                p {
+                    margin: 20px;
+                }
+            }
+            button {
+                margin: 50px;
+                padding: 10px;
+                font-size: .9em;
+                border-radius: 15px;
+                border: 2px solid black;
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(236, 205, 205);
+                    background: black;
+                }
+            }
+        }
         .drinks {
             margin-top: 5vh;
             .beverage {
