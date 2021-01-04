@@ -83,6 +83,7 @@ body .content {
   margin-bottom: 5vh;
 }
 body .content .shopping-cart {
+  text-align: center;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -100,7 +101,6 @@ body .content .shopping-cart .cart-items {
   flex-direction: column;
 }
 body .content .shopping-cart .cart-items .order {
-  width: 300px;
   background: snow;
   border-radius: 15px;
   display: flex;
@@ -114,6 +114,15 @@ body .content .shopping-cart .cart-items .order .order-item {
 body .content .shopping-cart .cart-items .order .order-price {
   margin: 10px;
 }
+body .content .shopping-cart .cart-items .order .delete {
+  margin: 10px;
+  max-height: 5vh;
+}
+body .content .shopping-cart .cart-items .order .delete:hover {
+  cursor: pointer;
+  color: #eccdcd;
+  background: black;
+}
 body .content .shopping-cart .total {
   width: 100vw;
   height: 10vh;
@@ -125,7 +134,7 @@ body .content .shopping-cart .total {
 body .content .shopping-cart .total p {
   margin: 20px;
 }
-body .content .shopping-cart button {
+body .content .shopping-cart .checkout {
   margin: 50px;
   padding: 10px;
   font-size: 0.9em;
@@ -133,7 +142,7 @@ body .content .shopping-cart button {
   border: 2px solid black;
   outline: none;
 }
-body .content .shopping-cart button:hover {
+body .content .shopping-cart .checkout:hover {
   cursor: pointer;
   color: #eccdcd;
   background: black;
@@ -150,8 +159,8 @@ body .content .drinks .beverage {
 body .content .drinks .beverage img {
   margin: 15px;
   border-radius: 15px;
-  height: 300px;
   width: 250px;
+  height: 300px;
   box-shadow: 1px 1px 15px grey;
 }
 body .content .drinks .beverage .info {

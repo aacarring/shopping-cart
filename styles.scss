@@ -17,6 +17,7 @@ body {
     overflow: scroll;
     flex-direction: column;
     //need to make navbar responsive, consider media queries for breakpoints, will need to move content div further down at breakpoint
+   //also need to make images and info boxes resize responsively, replace px
     nav {
         overflow: hidden;
         font-family: 'Cutive Mono', monospace;
@@ -77,6 +78,7 @@ body {
         top: 15vh;
         margin-bottom: 5vh;
         .shopping-cart {
+            text-align: center;
             width: 100vw;
             @include flexDisplay();
             flex-direction: column;
@@ -88,7 +90,6 @@ body {
                 @include flexDisplay();
                 flex-direction: column;
                 .order {
-                    width: 300px;
                     background: snow;
                     border-radius: 15px;
                     display: flex;
@@ -100,6 +101,15 @@ body {
                     }
                     .order-price {
                         margin: 10px;
+                    }
+                    .delete {
+                        margin: 10px;
+                        max-height: 5vh;
+                        &:hover {
+                            cursor: pointer;
+                            color: rgb(236, 205, 205);
+                            background: black;
+                        }
                     }
                 }
             }
@@ -114,7 +124,7 @@ body {
                     margin: 20px;
                 }
             }
-            button {
+            .checkout {
                 margin: 50px;
                 padding: 10px;
                 font-size: .9em;
@@ -136,8 +146,8 @@ body {
                 img {
                     margin: 15px;
                     border-radius: 15px;
-                    height: 300px;
                     width: 250px;
+                    height: 300px;
                     box-shadow: 1px 1px 15px grey;
                 }
                 .info {

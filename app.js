@@ -4,7 +4,7 @@ const total = document.querySelector('.content .shopping-cart .total p');
 const checkoutBtn = document.querySelector('.content .shopping-cart .checkout');
 let totalCount = 0;
 
-// also need to add button to each cart item to remove
+//need to add functionality to remove items from list by clicking delete btn
 
 function addItem() {
     let item = this.parentElement;
@@ -14,14 +14,23 @@ function addItem() {
     let itemPrice = parseFloat(priceSpan[0].textContent.replace('$', ''));
     totalCount += itemPrice;
 
-    cart.innerHTML += `
+    let orderHTML = `
     <div class="order">
     <span class="order-item">${itemName}</span>
-    <span class="order-price">$ ${itemPrice}</span>
+    <span class="order-price">$${itemPrice}</span>
+    <button class="delete">Delete</button>
     </div>
     `
+    cart.innerHTML += orderHTML;
 
     total.textContent = `Total: $${totalCount.toFixed(2)}`;
+
+    function deleteItem() {
+        ////////////////
+    }
+
+    let deleteBtn = document.querySelector('.content .shopping-cart .order .delete');
+    deleteBtn.addEventListener('click', deleteItem);
 }
 
 function clearCart() {
