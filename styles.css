@@ -84,7 +84,6 @@ body .content {
 }
 body .content .shopping-cart {
   width: 100vw;
-  background: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,8 +93,28 @@ body .content .shopping-cart h1 {
   margin: 50px;
   font-family: "Cutive Mono", monospace;
 }
+body .content .shopping-cart .cart-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .content .shopping-cart .cart-items .order {
+  width: 300px;
+  background: snow;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1vh;
+}
+body .content .shopping-cart .cart-items .order .order-item {
+  margin: 10px;
+}
+body .content .shopping-cart .cart-items .order .order-price {
+  margin: 10px;
+}
 body .content .shopping-cart .total {
-  background: lightgoldenrodyellow;
   width: 100vw;
   height: 10vh;
   text-align: center;
@@ -112,6 +131,7 @@ body .content .shopping-cart button {
   font-size: 0.9em;
   border-radius: 15px;
   border: 2px solid black;
+  outline: none;
 }
 body .content .shopping-cart button:hover {
   cursor: pointer;
@@ -167,6 +187,7 @@ body .content .drinks .beverage .info button {
   padding: 15px;
   font-weight: 600;
   font-size: 0.9em;
+  outline: none;
 }
 body .content .drinks .beverage .info button:hover {
   cursor: pointer;

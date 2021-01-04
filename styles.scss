@@ -78,15 +78,32 @@ body {
         margin-bottom: 5vh;
         .shopping-cart {
             width: 100vw;
-            background: lightblue;
             @include flexDisplay();
             flex-direction: column;
             h1 {
                 margin: 50px;
                 font-family: 'Cutive Mono', monospace;
             }
+            .cart-items {
+                @include flexDisplay();
+                flex-direction: column;
+                .order {
+                    width: 300px;
+                    background: snow;
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 1vh;
+                    .order-item {
+                        margin: 10px;
+                    }
+                    .order-price {
+                        margin: 10px;
+                    }
+                }
+            }
             .total {
-                background: lightgoldenrodyellow;
                 width: 100vw;
                 height: 10vh;
                 text-align: center;
@@ -103,6 +120,7 @@ body {
                 font-size: .9em;
                 border-radius: 15px;
                 border: 2px solid black;
+                outline: none;
                 &:hover {
                     cursor: pointer;
                     color: rgb(236, 205, 205);
@@ -152,6 +170,7 @@ body {
                         padding: 15px;
                         font-weight: 600;
                         font-size: .9em;
+                        outline: none;
                         &:hover {
                             cursor: pointer;
                             color: rgb(236, 205, 205);
