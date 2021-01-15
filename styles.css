@@ -51,6 +51,19 @@ body nav header img {
   height: 65px;
   width: 65px;
 }
+@media (max-width: 619px) {
+  body nav header img {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (max-width: 448px) {
+  body nav header img {
+    height: 35px;
+    width: 35px;
+    margin-top: 5px;
+  }
+}
 body nav .links {
   display: flex;
   justify-content: center;
@@ -223,6 +236,12 @@ body .content .drinks .beverage .info button:hover {
   cursor: pointer;
   color: #eccdcd;
   background: black;
+}
+@media (max-width: 549px) {
+  body .content .drinks .beverage .info {
+    width: 250px;
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
