@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function checkoutMsg() {
-        alert("We have recieved your order and will begin preparing your delivery. Thanks for choosing Blaue Blume Bevery! :)");
+        if (totalCount < 1) return;
+        alert("We have recieved your order and will begin preparing your delivery. Thanks for choosing Blaue Blume Bevery!");
         clearCart();
     }
     
