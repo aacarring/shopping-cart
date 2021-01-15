@@ -38,7 +38,13 @@ body nav header {
 }
 body nav header h1 {
   margin: 10px;
+  font-size: 2em;
   text-align: center;
+}
+@media (max-width: 346px) {
+  body nav header h1 {
+    font-size: 1.75em;
+  }
 }
 body nav header img {
   margin-left: 10px;
@@ -64,6 +70,7 @@ body nav .links ul {
 body nav .links ul li {
   margin: 0 2vw;
   list-style-type: none;
+  font-size: 1.5em;
 }
 body nav .links ul li a {
   color: black;
@@ -72,6 +79,11 @@ body nav .links ul li a {
 body nav .links ul li a:hover {
   font-weight: 900;
   text-decoration: underline;
+}
+@media (max-width: 346px) {
+  body nav .links ul li {
+    font-size: 1.25em;
+  }
 }
 body .content {
   display: flex;
@@ -188,7 +200,7 @@ body .content .drinks .beverage .info .drink-name {
   text-align: center;
   font-size: 1.5em;
   font-weight: 600;
-  margin-bottom: 2vh;
+  margin: 2vh 1vw;
   font-family: "Cutive Mono", monospace;
 }
 body .content .drinks .beverage .info .price {
