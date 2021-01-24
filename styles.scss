@@ -95,6 +95,7 @@ body {
             @include flexDisplay();
             flex-direction: column;
             h1 {
+                font-size: 1.75em;
                 margin: 50px;
                 font-family: 'Cutive Mono', monospace;
             }
@@ -104,7 +105,7 @@ body {
                 .order {
                     background: snow;
                     border-radius: 15px;
-                    min-width: 25vw;
+                    width: 300px;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -116,9 +117,10 @@ body {
                         margin: 10px;
                     }
                     .delete {
-                        margin: 10px;
-                        margin-right: 1vw;
+                        margin: auto 2vw;
                         max-height: 5vh;
+                        padding: 2.5px;
+                        border-radius: 5px;
                         &:hover {
                             cursor: pointer;
                             color: $light-pink;
@@ -132,14 +134,14 @@ body {
                 height: 10vh;
                 text-align: center;
                 font-family: 'Cutive Mono', monospace;
-                font-size: 1.25em;
+                font-size: 1.75em;
                 font-weight: 600;
                 p {
                     margin: 20px;
                 }
             }
             .checkout {
-                margin: 50px;
+                margin-top: 50px;
                 padding: 10px;
                 font-size: .9em;
                 border-radius: 15px;
