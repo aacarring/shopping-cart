@@ -132,9 +132,10 @@ body .content .shopping-cart .cart-items {
   flex-direction: column;
 }
 body .content .shopping-cart .cart-items .order {
+  width: 30vw;
+  min-width: 300px;
   background: snow;
   border-radius: 15px;
-  width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -148,10 +149,10 @@ body .content .shopping-cart .cart-items .order .order-price {
 }
 body .content .shopping-cart .cart-items .order .delete {
   outline: none;
-  border: 2px solid black;
+  border: none;
   margin: auto 2vw;
   max-height: 5vh;
-  padding: 2.5px;
+  padding: 2.5px 5px;
   border-radius: 5px;
 }
 body .content .shopping-cart .cart-items .order .delete:hover {
